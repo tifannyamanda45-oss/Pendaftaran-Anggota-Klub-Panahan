@@ -1,0 +1,186 @@
+/* ===== Reset & dasar ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: #fff5f8;
+  color: #1c2434;
+  line-height: 1.5;
+}
+
+.header {
+  padding: 24px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0 0 4px;
+  font-size: 1.75rem;
+}
+
+.header p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ===== CSS: Ruang Lega untuk Layar Ponsel (Box Property) ===== */
+.jadwal {
+  flex: 1 1 320px;
+  max-width: 420px;
+  background: #fff;
+  border: 6px solid #1c2434;
+  border-radius: 32px;
+  padding: 24px 16px;
+}
+
+.jadwal h2 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+/* table { margin: 24px auto } */
+table {
+  margin: 24px auto;
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+th {
+  padding: 16px;
+  text-align: left;
+  background: #f3f4f6;
+  font-weight: 700;
+}
+
+/* td { padding: 16px } */
+td {
+  padding: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* ===== Baris jadwal yang bisa dipilih ===== */
+#tabelJadwal tr {
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+#tabelJadwal tr:hover {
+  background: #fdf0f5;
+}
+
+#tabelJadwal tr:focus-visible {
+  outline: 2px solid #b8406a;
+  outline-offset: -2px;
+}
+
+#tabelJadwal tr.dipilih {
+  background: #f5e1ea;
+  outline: 2px solid #b8406a;
+  outline-offset: -2px;
+}
+
+#tabelJadwal tr.dipilih td {
+  font-weight: 700;
+  color: #7a2a49;
+}
+
+.petunjuk {
+  margin: 0;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+#jadwal {
+  background: #f9fafb;
+  cursor: default;
+}
+
+/* ===== Form pendaftaran ===== */
+.pendaftaran {
+  flex: 1 1 280px;
+  max-width: 280px;
+}
+
+form {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+form h2 {
+  margin: 0 0 16px;
+  font-size: 1rem;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.75rem;
+  color: #4b5563;
+}
+
+input,
+select {
+  width: 100%;
+  margin-top: 4px;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background: #fff;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #b8406a;
+  border-color: #b8406a;
+}
+
+.hint {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.7rem;
+  color: #15803d;
+}
+
+.btn-daftar {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #b8406a;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn-daftar:hover {
+  background: #9d3459;
+}
+
+/* ===== Responsif ponsel ===== */
+@media (max-width: 640px) {
+  .jadwal,
+  .pendaftaran {
+    max-width: 100%;
+  }
+}
